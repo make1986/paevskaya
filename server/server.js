@@ -39,9 +39,7 @@ app.use(
   })
 );
 
-if (process.env.NODE_ENV === "production") {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, "../client/build")));
-}
+// app.use("/", express.static(path.join(__dirname, "../client/build")));
+// app.use("/admin", express.static(path.join(__dirname, "../admin/build")));
 
 http.listen(port, () => console.log(`Listening on port ${port}`));
